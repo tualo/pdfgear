@@ -17,7 +17,7 @@
 		"gears/string": "*",
 		"symfony/process": "*",
 		"symfony/filesystem": "*",
-		"jakoch/phantomjs-installer": "1.9.8"
+		"jakoch/phantomjs-installer": "*"
 	},
 	"require-dev":
 	{
