@@ -14,7 +14,7 @@
 	"require":
 	{
 		"gears/di": "*",
-		"gears/string": "*",
+		"tualo/stringgear": "*",
 		"symfony/process": "*",
 		"symfony/filesystem": "*",
 		"jakoch/phantomjs-installer": "*"
