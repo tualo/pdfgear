@@ -25,13 +25,13 @@ class PdfLibreOfficeTest extends PHPUnit_Framework_TestCase
 
 		$this->converter = function()
 		{
-			return new Gears\Pdf\Docx\Converter\LibreOffice();
+			return new TualoPDFGear\Pdf\Docx\Converter\LibreOffice();
 		};
 	}
 
 	public function testConvert()
 	{
-		Gears\Pdf::convert('./tests/templates/Convert.docx', './tests/output/LibreOfficeConvert.pdf', ['converter' => $this->converter]);
+		TualoPDFGear\Pdf::convert('./tests/templates/Convert.docx', './tests/output/LibreOfficeConvert.pdf', ['converter' => $this->converter]);
 
 		$text = Str::s($this->pdfBox->textFromPdfFile('./tests/output/LibreOfficeConvert.pdf'))->to('ascii');
 
@@ -40,7 +40,7 @@ class PdfLibreOfficeTest extends PHPUnit_Framework_TestCase
 
 	public function testSetValue()
 	{
-		$document = new Gears\Pdf('./tests/templates/SetValue.docx');
+		$document = new TualoPDFGear\Pdf('./tests/templates/SetValue.docx');
 		$document->converter = $this->converter;
 		$document->setValue('name', 'Brad Jones');
 		$document->save('./tests/output/LibreOfficeSetValue.pdf');
@@ -52,7 +52,7 @@ class PdfLibreOfficeTest extends PHPUnit_Framework_TestCase
 
 	public function testCloneBlock()
 	{
-		$document = new Gears\Pdf('./tests/templates/CloneBlock.docx');
+		$document = new TualoPDFGear\Pdf('./tests/templates/CloneBlock.docx');
 		$document->converter = $this->converter;
 		$document->cloneBlock('CLONEME', 3);
 		$document->save('./tests/output/LibreOfficeCloneBlock.pdf');
@@ -66,7 +66,7 @@ class PdfLibreOfficeTest extends PHPUnit_Framework_TestCase
 
 	public function testReplaceBlock()
 	{
-		$document = new Gears\Pdf('./tests/templates/ReplaceBlock.docx');
+		$document = new TualoPDFGear\Pdf('./tests/templates/ReplaceBlock.docx');
 		$document->converter = $this->converter;
 		$document->replaceBlock('REPLACEME', '<w:p><w:pPr><w:pStyle w:val="PreformattedText"/><w:rPr/></w:pPr><w:r><w:rPr/><w:t>I am replaced.</w:t></w:r></w:p>');
 		$document->save('./tests/output/LibreOfficeReplaceBlock.pdf');
@@ -80,7 +80,7 @@ class PdfLibreOfficeTest extends PHPUnit_Framework_TestCase
 
 	public function testDeleteBlock()
 	{
-		$document = new Gears\Pdf('./tests/templates/DeleteBlock.docx');
+		$document = new TualoPDFGear\Pdf('./tests/templates/DeleteBlock.docx');
 		$document->converter = $this->converter;
 		$document->deleteBlock('DELETEME');
 		$document->save('./tests/output/LibreOfficeDeleteBlock.pdf');
@@ -94,7 +94,7 @@ class PdfLibreOfficeTest extends PHPUnit_Framework_TestCase
 
 	public function testCloneRow()
 	{
-		$document = new Gears\Pdf('./tests/templates/CloneRow.docx');
+		$document = new TualoPDFGear\Pdf('./tests/templates/CloneRow.docx');
 		$document->converter = $this->converter;
 
 		$document->cloneRow('rowValue', 10);

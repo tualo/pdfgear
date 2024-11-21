@@ -1,4 +1,4 @@
-<?php namespace Gears\Pdf\Docx\Converter;
+<?php namespace TualoPDFGear\Pdf\Docx\Converter;
 ////////////////////////////////////////////////////////////////////////////////
 // __________ __             ________                   __________              
 // \______   \  |__ ______  /  _____/  ____ _____ ______\______   \ _______  ___
@@ -14,9 +14,9 @@
 use RuntimeException;
 use Gears\Di\Container;
 use Gears\String as Str;
-use Gears\Pdf\TempFile;
+use TualoPDFGear\Pdf\TempFile;
 use Symfony\Component\Process\Process;
-use Gears\Pdf\Contracts\DocxConverter;
+use TualoPDFGear\Pdf\Contracts\DocxConverter;
 
 class Unoconv extends Container implements DocxConverter
 {

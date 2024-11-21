@@ -27,7 +27,7 @@ class PdfGoogleTest extends PHPUnit_Framework_TestCase
 
 		$this->converter = function()
 		{
-			return new Gears\Pdf\Converter\Google
+			return new TualoPDFGear\Pdf\Converter\Google
 			([
 				'serviceAccountEmail' => 'PUT YOUR OWN GOOGLE DETAILS HERE',
 				'serviceAccountKeyFile' => 'PUT YOUR OWN GOOGLE DETAILS HERE'
@@ -37,9 +37,9 @@ class PdfGoogleTest extends PHPUnit_Framework_TestCase
 
 	public function testConvert()
 	{
-		Gears\Pdf::$staticConverter = $this->converter;
+		TualoPDFGear\Pdf::$staticConverter = $this->converter;
 
-		Gears\Pdf::convert('./tests/templates/Convert.docx', './tests/output/GoogleConvert.pdf', ['converter' => $this->converter]);
+		TualoPDFGear\Pdf::convert('./tests/templates/Convert.docx', './tests/output/GoogleConvert.pdf', ['converter' => $this->converter]);
 
 		$text = $this->pdfBox->textFromPdfFile('./tests/output/GoogleConvert.pdf');
 
@@ -48,7 +48,7 @@ class PdfGoogleTest extends PHPUnit_Framework_TestCase
 
 	public function testSetValue()
 	{
-		$document = new Gears\Pdf('./tests/templates/SetValue.docx');
+		$document = new TualoPDFGear\Pdf('./tests/templates/SetValue.docx');
 		$document->converter = $this->converter;
 		$document->setValue('name', 'Brad Jones');
 		$document->save('./tests/output/GoogleSetValue.pdf');
@@ -60,7 +60,7 @@ class PdfGoogleTest extends PHPUnit_Framework_TestCase
 
 	public function testCloneBlock()
 	{
-		$document = new Gears\Pdf('./tests/templates/CloneBlock.docx');
+		$document = new TualoPDFGear\Pdf('./tests/templates/CloneBlock.docx');
 		$document->converter = $this->converter;
 		$document->cloneBlock('CLONEME', 3);
 		$document->save('./tests/output/GoogleCloneBlock.pdf');
@@ -74,7 +74,7 @@ class PdfGoogleTest extends PHPUnit_Framework_TestCase
 
 	public function testReplaceBlock()
 	{
-		$document = new Gears\Pdf('./tests/templates/ReplaceBlock.docx');
+		$document = new TualoPDFGear\Pdf('./tests/templates/ReplaceBlock.docx');
 		$document->converter = $this->converter;
 		$document->replaceBlock('REPLACEME', '<w:p><w:pPr><w:pStyle w:val="PreformattedText"/><w:rPr/></w:pPr><w:r><w:rPr/><w:t>I am replaced.</w:t></w:r></w:p>');
 		$document->save('./tests/output/GoogleReplaceBlock.pdf');
@@ -88,7 +88,7 @@ class PdfGoogleTest extends PHPUnit_Framework_TestCase
 
 	public function testDeleteBlock()
 	{
-		$document = new Gears\Pdf('./tests/templates/DeleteBlock.docx');
+		$document = new TualoPDFGear\Pdf('./tests/templates/DeleteBlock.docx');
 		$document->converter = $this->converter;
 		$document->deleteBlock('DELETEME');
 		$document->save('./tests/output/GoogleDeleteBlock.pdf');
@@ -102,7 +102,7 @@ class PdfGoogleTest extends PHPUnit_Framework_TestCase
 
 	public function testCloneRow()
 	{
-		$document = new Gears\Pdf('./tests/templates/CloneRow.docx');
+		$document = new TualoPDFGear\Pdf('./tests/templates/CloneRow.docx');
 		$document->converter = $this->converter;
 
 		$document->cloneRow('rowValue', 10);

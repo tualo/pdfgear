@@ -47,17 +47,17 @@ Both APIs are accessed through the main ```Pdf``` class.
 
 To convert a word document into a PDF without any templating:
 ```php
-$pdf = Gears\Pdf::convert('/path/to/document.docx');
+$pdf = TualoPDFGear\Pdf::convert('/path/to/document.docx');
 ```
 
 To save the generated PDF to a file:
 ```php
-Gears\Pdf::convert('/path/to/document.docx', '/path/to/document.pdf');
+TualoPDFGear\Pdf::convert('/path/to/document.docx', '/path/to/document.pdf');
 ```
 
 To convert a html document into a PDF:
 ```php
-$pdf = Gears\Pdf::convert('/path/to/document.html');
+$pdf = TualoPDFGear\Pdf::convert('/path/to/document.html');
 ```
 
 > NOTE: The save to file works just the same for a HTML document.
@@ -67,10 +67,10 @@ DOCX Templating
 By default the DOCX backend defaults to using ```libre-office-headless```,
 to use ```unoconv```, override the converter like so:
 ```php
-$document = new Gears\Pdf('/path/to/document.docx');
+$document = new TualoPDFGear\Pdf('/path/to/document.docx');
 $document->converter = function()
 {
-	return new Gears\Pdf\Docx\Converter\Unoconv();
+	return new TualoPDFGear\Pdf\Docx\Converter\Unoconv();
 };
 $document->save('/path/to/document.pdf');
 ```

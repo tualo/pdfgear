@@ -1,4 +1,4 @@
-<?php namespace Gears\Pdf\Docx;
+<?php namespace TualoPDFGear\Pdf\Docx;
 ////////////////////////////////////////////////////////////////////////////////
 // __________ __             ________                   __________              
 // \______   \  |__ ______  /  _____/  ____ _____ ______\______   \ _______  ___
@@ -15,15 +15,15 @@ use ZipArchive;
 use RuntimeException;
 use Gears\String as Str;
 use Gears\Di\Container;
-use Gears\Pdf\TempFile;
-use Gears\Pdf\Docx\SimpleXMLElement;
-use Gears\Pdf\Docx\Converter\LibreOffice;
-use Gears\Pdf\Contracts\Backend as BackendInterface;
+use TualoPDFGear\Pdf\TempFile;
+use TualoPDFGear\Pdf\Docx\SimpleXMLElement;
+use TualoPDFGear\Pdf\Docx\Converter\LibreOffice;
+use TualoPDFGear\Pdf\Contracts\Backend as BackendInterface;
 
 class Backend extends Container implements BackendInterface
 {
 	/**
-	 * @var Gears\Pdf\TempFile DOCX document to use as the template for our PDF.
+	 * @var TualoPDFGear\Pdf\TempFile DOCX document to use as the template for our PDF.
 	 *                         Set as the first argument of the constructor of
 	 *                         this class.
 	 */

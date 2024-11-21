@@ -13,7 +13,7 @@
 
 require('../../vendor/autoload.php');
 
-$doc = new Gears\Pdf('../templates/Convert.docx');
+$doc = new TualoPDFGear\Pdf('../templates/Convert.docx');
 $doc->download();
 
 /*

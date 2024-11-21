@@ -1,4 +1,4 @@
-<?php namespace Gears;
+<?php namespace TualoPDFGear;
 ////////////////////////////////////////////////////////////////////////////////
 // __________ __             ________                   __________
 // \______   \  |__ ______  /  _____/  ____ _____ ______\______   \ _______  ___
@@ -15,12 +15,12 @@ use SplFileInfo;
 use RuntimeException;
 use Gears\String as Str;
 use Gears\Di\Container;
-use Gears\Pdf\TempFile;
+use TualoPDFGear\Pdf\TempFile;
 
 class Pdf extends Container
 {
 	/**
-	 * This holds an instance of ```Gears\Pdf\TempFile```
+	 * This holds an instance of ```TualoPDFGear\Pdf\TempFile```
 	 * pointing to the document we will convert to PDF.
 	 */
 	protected $document;
@@ -54,7 +54,7 @@ class Pdf extends Container
 	protected $injectFile;
 	
 	/**
-	 * A closure than returns an instance of ```Gears\Pdf\TempFile```.
+	 * A closure than returns an instance of ```TualoPDFGear\Pdf\TempFile```.
 	 */
 	protected $injectTempFile;
 	

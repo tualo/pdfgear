@@ -1,5 +1,5 @@
 {
-	"name": "gears/pdf",
+	"name": "tualo/pdfgear",
 	"description": "A PDF builder using HTML or DOCX templates.",
 	"homepage": "https://github.com/phpgearbox/pdf",
 	"keywords": ["pdf", "docx", "template", "builder", "converter"],
@@ -8,25 +8,25 @@
 	{
 		"psr-4":
 		{
-			"Gears\\": "src"
+			"TualoPDFGear\\": "src"
 		}
 	},
 	"require":
 	{
 		"gears/di": "*",
-		"gears/string": "^0.6.0",
-		"symfony/process": "2.*",
-		"symfony/filesystem": "2.*",
+		"gears/string": "*",
+		"symfony/process": "*",
+		"symfony/filesystem": "*",
 		"jakoch/phantomjs-installer": "1.9.8"
 	},
 	"require-dev":
 	{
 		"codegyre/robo": "*",
-		"phpunit/phpunit": "4.*",
-		"guzzlehttp/guzzle": "4.*",
+		"phpunit/phpunit": "*",
+		"guzzlehttp/guzzle": "*",
 		"sgh/pdfbox": "dev-master",
-		"google/apiclient": "1.*",
-		"symfony/finder": "2.*"
+		"google/apiclient": "*",
+		"symfony/finder": "*"
 	},
 	"scripts":
 	{

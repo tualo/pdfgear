@@ -1,4 +1,4 @@
-<?php namespace Gears\Pdf\Docx\Converter;
+<?php namespace TualoPDFGear\Pdf\Docx\Converter;
 ////////////////////////////////////////////////////////////////////////////////
 // __________ __             ________                   __________              
 // \______   \  |__ ______  /  _____/  ____ _____ ______\______   \ _______  ___
@@ -13,13 +13,13 @@
 
 use RuntimeException;
 use Gears\Di\Container;
-use Gears\Pdf\TempFile;
+use TualoPDFGear\Pdf\TempFile;
 use Google_Client as GClient;
 use Google_Http_Request as GRequest;
 use Google_Auth_AssertionCredentials as GAuth;
 use Google_Service_Drive as GDrive;
 use Google_Service_Drive_DriveFile as GFile;
-use Gears\Pdf\Contracts\DocxConverter;
+use TualoPDFGear\Pdf\Contracts\DocxConverter;
 
 class Google extends Container implements DocxConverter
 {

@@ -1,4 +1,4 @@
-<?php namespace Gears\Pdf\Html;
+<?php namespace TualoPDFGear\Pdf\Html;
 ////////////////////////////////////////////////////////////////////////////////
 // __________ __             ________                   __________
 // \______   \  |__ ______  /  _____/  ____ _____ ______\______   \ _______  ___
@@ -14,14 +14,14 @@
 use RuntimeException;
 use Gears\Di\Container;
 use Gears\String as Str;
-use Gears\Pdf\TempFile;
+use TualoPDFGear\Pdf\TempFile;
 use Symfony\Component\Process\Process;
-use Gears\Pdf\Contracts\Backend as BackendInterface;
+use TualoPDFGear\Pdf\Contracts\Backend as BackendInterface;
 
 class Backend extends Container implements BackendInterface
 {
 	/**
-	 * @var Gears\Pdf\TempFile The document we will convert to PDF.
+	 * @var TualoPDFGear\Pdf\TempFile The document we will convert to PDF.
 	 */
 	protected $document;
 

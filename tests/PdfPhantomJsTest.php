@@ -28,7 +28,7 @@ class PdfPhantomJsTest extends PHPUnit_Framework_TestCase
 	{
 		$html = file_get_contents('./tests/templates/PhantomJs.html');
 		
-		$result = Gears\Pdf::convert($html, './tests/output/PhantomJsConvert.pdf');
+		$result = TualoPDFGear\Pdf::convert($html, './tests/output/PhantomJsConvert.pdf');
 		
 		$this->assertInstanceOf('SplFileInfo', $result);
 		

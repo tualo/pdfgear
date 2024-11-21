@@ -13,7 +13,7 @@
 
 require('../../vendor/autoload.php');
 
-$doc = new Gears\Pdf('../templates/action-plan-template.docx');
+$doc = new TualoPDFGear\Pdf('../templates/action-plan-template.docx');
 $doc->stream();
 
 /*
