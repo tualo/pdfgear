@@ -11,7 +11,7 @@
 // -----------------------------------------------------------------------------
 ////////////////////////////////////////////////////////////////////////////////
 
-use Gears\String as Str;
+use Tualo\StringGear as Str;
 use SGH\PdfBox\PdfBox;
 
 class PdfLibreOfficeTest extends PHPUnit_Framework_TestCase

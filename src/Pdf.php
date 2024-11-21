@@ -13,7 +13,7 @@
 
 use SplFileInfo;
 use RuntimeException;
-use Gears\String as Str;
+use Tualo\StringGear as Str;
 use Gears\Di\Container;
 use TualoPDFGear\Pdf\TempFile;
 
